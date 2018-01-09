@@ -1,7 +1,5 @@
 #!/bin/sh
 
-DO_API_KEY=$1
-
 curl -X POST https://api.digitalocean.com/v2/droplets \
 -H 'Content-Type: application/json' \
 -H "Authorization: Bearer $DO_API_KEY" \
