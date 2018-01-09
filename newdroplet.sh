@@ -10,5 +10,6 @@ curl -X POST https://api.digitalocean.com/v2/droplets \
      "user_data":"
 #cloud-config
 runcmd:
-  - sh -x  < <(curl -s https://raw.githubusercontent.com/carlosbunn/deployment-pipeline1/master/install.sh)
+  - curl -O https://raw.githubusercontent.com/carlosbunn/deployment-pipeline1/master/install.sh
+  - /bin/sh -x install.sh
 "}'
