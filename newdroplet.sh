@@ -8,7 +8,7 @@ curl -X POST https://api.digitalocean.com/v2/droplets \
 -H "Authorization: Bearer $DO_API_KEY" \
 -d '{"name":"calculatorservice", "region":"nyc3", "size":"512mb",
      "image":"18325354", "ssh_keys":["17289971"],
-     "tags":["$TAG"]
+     "tags":["$TAG"],
      "user_data":"
 #cloud-config
 runcmd:
