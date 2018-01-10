@@ -12,7 +12,7 @@ chmod -R 775 /app
 echo "agent.auto.register.key=$AGENT_KEY
 agent.auto.register.resources=maven,java
 agent.auto.register.environments=QA
-agent.auto.register.hostname=$(hostname)" >> /var/lib/go-agent/config/autoregister.properties
+agent.auto.register.hostname=$(hostname)" >> /app/config/autoregister.properties
 /etc/init.d/go-agent start
 
 curl https://raw.githubusercontent.com/carlosbunn/deployment-pipeline1/master/calculator-service > /etc/init.d/calculator-service
