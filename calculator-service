@@ -1,6 +1,6 @@
 #!/bin/sh
 SERVICE_NAME=calculator-service
-PATH_TO_JAR=/var/lib/go-agent/pipelines/build/target/calculator-service-1.0.0-SNAPSHOT.jar
+PATH_TO_JAR=/app/jar/calculator-service-*.jar
 PID_PATH_NAME=/tmp/calculator-service.pid
 case $1 in
     start)
