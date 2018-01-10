@@ -8,3 +8,6 @@ agent.auto.register.resources=maven,java
 agent.auto.register.environments=QA
 agent.auto.register.hostname=Agent01" >> /var/lib/go-agent/config/autoregister.properties
 /etc/init.d/go-agent start
+
+curl https://raw.githubusercontent.com/carlosbunn/deployment-pipeline1/master/calculator-service > /etc/init.d/calculator-service
+chmod 755 /etc/init.d/calculator-service
