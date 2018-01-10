@@ -8,7 +8,7 @@ curl -X POST https://api.digitalocean.com/v2/droplets \
 -H 'Content-Type: application/json' \
 -H "Authorization: Bearer $DO_API_KEY" \
 -d '{"name":"calculatorservice01", "region":"nyc3", "size":"1gb",
-     "image":"18325354", "ssh_keys":["17289971"],
+     "image":"25909727", "ssh_keys":["17289971"],
      "tags":["'$TAG'"],
      "user_data":"
 #cloud-config
