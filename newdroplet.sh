@@ -14,5 +14,5 @@ curl -X POST https://api.digitalocean.com/v2/droplets \
 #cloud-config
 runcmd:
   - curl -O https://raw.githubusercontent.com/carlosbunn/deployment-pipeline1/master/install.sh
-  - /bin/sh -x install.sh $AGENT_KEY
+  - /bin/sh -x install.sh '$AGENT_KEY'
 "}'
