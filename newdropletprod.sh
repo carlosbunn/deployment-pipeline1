@@ -3,7 +3,7 @@
 DO_API_KEY=$1
 TAG=$2
 AGENT_KEY=$3
-if ( curl -s -X GET -H "Content-Type: application/json" -H "Authorization: Bearer $DO_API_KEY" "https://api.digitalocean.com/v2/droplets?tag_name=build" |grep -q '"total":0' ); then
+if ( curl -s -X GET -H "Content-Type: application/json" -H "Authorization: Bearer $DO_API_KEY" "https://api.digitalocean.com/v2/droplets?tag_name=production" |grep -q '"total":0' ); then
 curl -X POST https://api.digitalocean.com/v2/droplets \
 -H 'Content-Type: application/json' \
 -H "Authorization: Bearer $DO_API_KEY" \
