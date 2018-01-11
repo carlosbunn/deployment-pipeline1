@@ -3,11 +3,12 @@ SERVICE_NAME=calculator-service
 PATH_TO_JAR=/app/jar/calculator-service-*.jar
 PID_PATH_NAME=/tmp/calculator-service.pid
 
-if ( ps aux|grep [c]alculator ); then
-  kill $(ps aux|grep [c]alculator |awk '{print $2}')
+if ( ps aux|grep -q '[c]alculator-service-1.0.0-SNAPSHOT.jar' ); then
+  rm $PID_PATH_NAME
+  kill $(ps aux|grep '[c]alculator-service-1.0.0-SNAPSHOT.jar' | awk '{print $2}')
   sleep 5
 fi
-              
+
 
 case $1 in
     start)
