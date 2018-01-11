@@ -9,8 +9,11 @@ case $1 in
         if [ ! -f $PID_PATH_NAME ]; then
             nohup java -jar $PATH_TO_JAR /tmp 2>> /dev/null >> /dev/null &
                         echo $! > $PID_PATH_NAME
-                        #wating for the calculator do run before the tests
-                        sleep 55
+                        #wating for the calculator to start
+                        while ! ( netstat -tulpn | grep -q 8200 ); do
+                          sleep 1
+                          echo waiting service start...
+                        done
             echo "$SERVICE_NAME started ..."
         else
             echo "$SERVICE_NAME is already running ..."
