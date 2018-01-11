@@ -12,7 +12,7 @@ case $1 in
                         #wating for the calculator to start
                         while ! ( netstat -tulpn | grep -q 8200 ); do
                           sleep 1
-                          echo waiting service start...
+                          echo "Waiting service start..."
                         done
             echo "$SERVICE_NAME started ..."
         else
